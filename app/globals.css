@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+:root {
+  --bg:          #f6f4ef;
+  --bg-card:     #ffffff;
+  --bg-hover:    #ede9e0;
+  --border:      #ddd8ce;
+  --text:        #1a1f2e;
+  --text-muted:  #7a8398;
+  --accent:      #8c6d2f;
+  --accent-hover:#a07d3a;
+  --blue:        #2a5bb5;
+  --blue-dim:    rgba(42, 91, 181, 0.08);
+  --gold-dim:    rgba(140, 109, 47, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Global gradient background ──────────────────────
+   Warm ivory base with subtle gold and blue accents —
+   classic premium investment look (Goldman / KKR feel).
+─────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  min-height: 100%;
+  background-color: #f6f4ef;
+  background-image:
+    /* Warm gold bloom at top */
+    radial-gradient(ellipse 220% 60% at 50% 0%,
+      rgba(140, 109, 47, 0.10) 0%,
+      rgba(42, 91, 181, 0.04) 45%,
+      transparent 65%),
+    /* Subtle blue accent left */
+    radial-gradient(ellipse 90% 45% at -5% 15%,
+      rgba(42, 91, 181, 0.05) 0%,
+      transparent 55%),
+    /* Subtle gold accent right */
+    radial-gradient(ellipse 70% 35% at 105% 20%,
+      rgba(140, 109, 47, 0.05) 0%,
+      transparent 50%),
+    /* Base directional gradient */
+    linear-gradient(170deg,
+      #f9f8f4 0%,
+      #f6f4ef 45%,
+      #f2efe8 100%);
+}
+
+body {
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-inter, 'Arial', Helvetica, sans-serif);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover { color: var(--accent); }
+
+/* ─── Navigation ──────────────────────────────────── */
+.nav-link {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.nav-link:hover  { color: var(--text) !important; }
+.nav-link.active { color: var(--accent) !important; }
+
+/* ─── Buttons ─────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 36px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: var(--accent-hover) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(140, 109, 47, 0.35) !important;
+}
+
+.btn-outline {
+  padding: 10px 0;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  width: 100%;
+}
+.btn-outline:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+/* ─── Cards ───────────────────────────────────────── */
+.card-hover {
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  border-color: rgba(140, 109, 47, 0.3) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(140, 109, 47, 0.1);
+}
+
+/* ─── Section label (gold line + uppercase tag) ────── */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ─── Asset / portfolio link ──────────────────────── */
+.asset-link {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+}
+.asset-link:hover { color: var(--accent) !important; }
+
+/* ─── Contact link ────────────────────────────────── */
+.contact-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: pre-line;
+  transition: color 0.2s;
+}
+.contact-link:hover { color: var(--accent) !important; }
+
+/* ─── Anchor tab nav ──────────────────────────────── */
+.anchor-tab {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-bottom: 14px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.anchor-tab:hover {
+  color: var(--accent) !important;
+  border-bottom-color: var(--accent) !important;
+}
+
+/* ─── Form inputs ─────────────────────────────────── */
+.form-input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  resize: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+.form-input::placeholder { color: var(--text-muted); }
+.form-input:focus {
+  border-color: var(--accent);
+  background: rgba(140, 109, 47, 0.03);
+}
+
+/* ─── Requisites — responsive grid ───────────────── */
+.req-grid { display: grid; grid-template-columns: 220px 1fr; }
+@media (max-width: 480px) {
+  .req-grid { grid-template-columns: 1fr !important; }
+  .req-label { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
+}
+
+/* ─── Hover utilities ─────────────────────────────── */
+.hover-accent:hover       { color: var(--accent) !important; }
+.hover-accent-bright:hover{ color: var(--accent-hover) !important; }
+.hover-text:hover         { color: var(--text) !important; }
+
+/* ─── News drawer ─────────────────────────────────── */
+@media (max-width: 700px) {
+  .news-drawer-grid { grid-template-columns: 1fr !important; }
+  .news-drawer-grid > div:first-child {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+    max-height: 260px !important;
+  }
+}
+
+/* ─── Modal animations ────────────────────────────── */
+@keyframes backdropIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes panelIn {
+  from { opacity: 0; transform: scale(0.95) translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ─── Page-load fade-in ───────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: none; }
+}
+.animate-in { animation: fadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.delay-1    { animation-delay: 0.1s; }
+.delay-2    { animation-delay: 0.2s; }
+.delay-3    { animation-delay: 0.3s; }
+.delay-4    { animation-delay: 0.4s; }
