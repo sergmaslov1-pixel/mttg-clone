@@ -33,7 +33,7 @@ export default function Header() {
         <Link href="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
           <Image
             src="/images/logo.svg"
-            alt="MTT-Group"
+            alt="Нест Капитал"
             width={148}
             height={16}
             priority

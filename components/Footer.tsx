@@ -15,7 +15,7 @@ export default function Footer() {
         flexWrap: 'wrap',
       }}>
         <p style={{ fontSize: 12, color: 'var(--text-muted)', letterSpacing: '0.04em' }}>
-          © 2013—2025 МТТ Групп. Все права защищены.
+          © 2013—2025 Нест Капитал. Все права защищены.
         </p>
         <p style={{ fontSize: 12, color: 'var(--text-muted)', letterSpacing: '0.04em' }}>
           109147, г. Москва, ул. Марксистская, д. 22

@@ -46,7 +46,7 @@ export default function ContactsPage() {
         <ContactCard
           icon={<IconOffice />}
           label="Наименование"
-          value="«МТТ Групп»"
+          value="ООО «Нест Капитал»"
         />
         <ContactCard
           icon={<IconClock />}
