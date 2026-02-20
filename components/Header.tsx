@@ -32,12 +32,12 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
           <Image
-            src="/images/logo.svg"
+            src="/images/logo_new.png"
             alt="Нест Капитал"
             width={148}
-            height={16}
+            height={40}
             priority
-            style={{ filter: 'brightness(0) invert(1)', height: 16, width: 'auto' }}
+            style={{ height: 40, width: 'auto' }}
           />
         </Link>
 
