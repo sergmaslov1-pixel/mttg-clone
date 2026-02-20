@@ -11,10 +11,10 @@ export default function Header() {
 
   return (
     <header style={{
-      background: 'rgba(246, 244, 239, 0.92)',
+      background: 'rgba(7, 24, 48, 0.88)',
       backdropFilter: 'blur(24px)',
       WebkitBackdropFilter: 'blur(24px)',
-      borderBottom: '1px solid rgba(0, 0, 0, 0.08)',
+      borderBottom: '1px solid rgba(26, 52, 96, 0.8)',
       position: 'sticky',
       top: 0,
       zIndex: 100,
@@ -37,7 +37,7 @@ export default function Header() {
             width={148}
             height={16}
             priority
-            style={{ filter: 'brightness(0)', height: 16, width: 'auto' }}
+            style={{ filter: 'brightness(0) invert(1)', height: 16, width: 'auto' }}
           />
         </Link>
 

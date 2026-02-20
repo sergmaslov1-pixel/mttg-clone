@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --bg:          #f6f4ef;
-  --bg-card:     #ffffff;
-  --bg-hover:    #ede9e0;
-  --border:      #ddd8ce;
-  --text:        #1a1f2e;
-  --text-muted:  #7a8398;
-  --accent:      #8c6d2f;
-  --accent-hover:#a07d3a;
-  --blue:        #2a5bb5;
-  --blue-dim:    rgba(42, 91, 181, 0.08);
-  --gold-dim:    rgba(140, 109, 47, 0.06);
+  --bg:          #071830;
+  --bg-card:     #0c2040;
+  --bg-hover:    #112650;
+  --border:      #1a3460;
+  --text:        #ddeaff;
+  --text-muted:  #6b8ab8;
+  --accent:      #c8a96e;
+  --accent-hover:#d4ba85;
+  --blue:        #5aa0f0;
+  --blue-dim:    rgba(90, 160, 240, 0.10);
+  --gold-dim:    rgba(200, 169, 110, 0.07);
 }
 
 * {
@@ -21,32 +21,33 @@
 }
 
 /* ─── Global gradient background ──────────────────────
-   Warm ivory base with subtle gold and blue accents —
-   classic premium investment look (Goldman / KKR feel).
+   Deep saturated navy → rich blue — premium investment
+   look (BlackRock / Morgan Stanley feel).
 ─────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
   min-height: 100%;
-  background-color: #f6f4ef;
+  background-color: #071830;
   background-image:
-    /* Warm gold bloom at top */
-    radial-gradient(ellipse 220% 60% at 50% 0%,
-      rgba(140, 109, 47, 0.10) 0%,
-      rgba(42, 91, 181, 0.04) 45%,
+    /* Rich blue bloom at top */
+    radial-gradient(ellipse 200% 65% at 50% 0%,
+      rgba(20, 80, 220, 0.50) 0%,
+      rgba(10, 40, 140, 0.28) 42%,
       transparent 65%),
-    /* Subtle blue accent left */
-    radial-gradient(ellipse 90% 45% at -5% 15%,
-      rgba(42, 91, 181, 0.05) 0%,
+    /* Cobalt accent left */
+    radial-gradient(ellipse 90% 50% at -8% 20%,
+      rgba(15, 60, 190, 0.38) 0%,
+      transparent 58%),
+    /* Indigo accent right */
+    radial-gradient(ellipse 75% 45% at 108% 18%,
+      rgba(30, 70, 200, 0.28) 0%,
       transparent 55%),
-    /* Subtle gold accent right */
-    radial-gradient(ellipse 70% 35% at 105% 20%,
-      rgba(140, 109, 47, 0.05) 0%,
-      transparent 50%),
     /* Base directional gradient */
-    linear-gradient(170deg,
-      #f9f8f4 0%,
-      #f6f4ef 45%,
-      #f2efe8 100%);
+    linear-gradient(168deg,
+      #0d2647 0%,
+      #0a1e3c 35%,
+      #071830 65%,
+      #050f20 100%);
 }
 
 body {
@@ -83,7 +84,7 @@ a:hover { color: var(--accent); }
   gap: 10px;
   padding: 14px 36px;
   background: var(--accent);
-  color: #ffffff;
+  color: #071830;
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 0.1em;
@@ -94,9 +95,9 @@ a:hover { color: var(--accent); }
 }
 .btn-primary:hover {
   background: var(--accent-hover) !important;
-  color: #ffffff !important;
+  color: #071830 !important;
   transform: translateY(-1px);
-  box-shadow: 0 8px 28px rgba(140, 109, 47, 0.35) !important;
+  box-shadow: 0 8px 28px rgba(200, 169, 110, 0.35) !important;
 }
 
 .btn-outline {
@@ -122,9 +123,9 @@ a:hover { color: var(--accent); }
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card-hover:hover {
-  border-color: rgba(140, 109, 47, 0.3) !important;
+  border-color: rgba(200, 169, 110, 0.35) !important;
   transform: translateY(-4px);
-  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(140, 109, 47, 0.1);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(200, 169, 110, 0.1);
 }
 
 /* ─── Section label (gold line + uppercase tag) ────── */
@@ -190,7 +191,7 @@ a:hover { color: var(--accent); }
 /* ─── Form inputs ─────────────────────────────────── */
 .form-input {
   width: 100%;
-  background: rgba(0, 0, 0, 0.02);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
   color: var(--text);
   font-family: inherit;
@@ -205,7 +206,7 @@ a:hover { color: var(--accent); }
 .form-input::placeholder { color: var(--text-muted); }
 .form-input:focus {
   border-color: var(--accent);
-  background: rgba(140, 109, 47, 0.03);
+  background: rgba(200, 169, 110, 0.04);
 }
 
 /* ─── Requisites — responsive grid ───────────────── */

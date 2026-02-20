@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // Subtle grid pattern — L-path tiles into a full crossing grid
-const GRID_PATTERN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M64 0L0 0 0 64' fill='none' stroke='rgba(0%2C0%2C0%2C0.05)' stroke-width='0.5'/%3E%3C/svg%3E")`;
+const GRID_PATTERN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M64 0L0 0 0 64' fill='none' stroke='rgba(255%2C255%2C255%2C0.04)' stroke-width='0.5'/%3E%3C/svg%3E")`;
 
 const metrics = [
   { value: '2013',      label: 'Год основания' },
@@ -30,9 +30,9 @@ export default function Home() {
         <div aria-hidden="true" style={{
           position: 'absolute', inset: 0, pointerEvents: 'none',
           background: [
-            'radial-gradient(ellipse 900px 550px at 65% -80px, rgba(42,91,181,0.06) 0%, transparent 60%)',
-            'radial-gradient(ellipse 700px 450px at -10% 100%, rgba(140,109,47,0.05) 0%, transparent 60%)',
-            'radial-gradient(ellipse 400px 300px at 105% 75%, rgba(42,91,181,0.04) 0%, transparent 60%)',
+            'radial-gradient(ellipse 900px 550px at 65% -80px, rgba(90,160,240,0.14) 0%, transparent 60%)',
+            'radial-gradient(ellipse 700px 450px at -10% 100%, rgba(200,169,110,0.07) 0%, transparent 60%)',
+            'radial-gradient(ellipse 400px 300px at 105% 75%, rgba(60,120,220,0.10) 0%, transparent 60%)',
             'var(--bg)',
           ].join(', '),
         }} />
@@ -78,7 +78,7 @@ export default function Home() {
           </h1>
 
           <div className="animate-in delay-2" style={{
-            width: 56, height: 1, background: 'rgba(140,109,47,0.35)', marginBottom: 40,
+            width: 56, height: 1, background: 'rgba(200,169,110,0.45)', marginBottom: 40,
           }} />
 
           <p className="animate-in delay-2" style={{
@@ -116,12 +116,12 @@ export default function Home() {
         />
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0, height: '50%',
-          background: 'linear-gradient(to bottom, #f9f8f4, transparent)',
+          background: 'linear-gradient(to bottom, #0d2647, transparent)',
           pointerEvents: 'none',
         }} />
         <div style={{
           position: 'absolute', bottom: 0, left: 0, right: 0, height: '55%',
-          background: 'linear-gradient(to top, #f2efe8, transparent)',
+          background: 'linear-gradient(to top, #050f20, transparent)',
           pointerEvents: 'none',
         }} />
       </div>
