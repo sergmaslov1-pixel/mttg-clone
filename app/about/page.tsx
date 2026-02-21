@@ -126,7 +126,7 @@ export default function AboutPage() {
               {/* Logo */}
               <a href={asset.url} target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
                 <div style={{
-                  background: 'var(--bg)',
+                  background: '#ffffff',
                   padding: '14px 20px',
                   display: 'flex',
                   alignItems: 'center',
