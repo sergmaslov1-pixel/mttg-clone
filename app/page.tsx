@@ -25,6 +25,38 @@ export default function Home() {
         overflow: 'hidden',
       }}>
 
+        {/* Background image */}
+        <Image
+          aria-hidden="true"
+          src="/images/hero.png"
+          alt=""
+          width={1920}
+          height={1000}
+          priority
+          style={{
+            position: 'absolute', inset: 0,
+            width: '100%', height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center 30%',
+            opacity: 0.22,
+            pointerEvents: 'none',
+          }}
+        />
+
+        {/* Dark gradient — top fade from bg color */}
+        <div aria-hidden="true" style={{
+          position: 'absolute', top: 0, left: 0, right: 0, height: '55%',
+          background: 'linear-gradient(to bottom, var(--bg) 0%, transparent 100%)',
+          pointerEvents: 'none',
+        }} />
+
+        {/* Dark gradient — bottom fade */}
+        <div aria-hidden="true" style={{
+          position: 'absolute', bottom: 0, left: 0, right: 0, height: '55%',
+          background: 'linear-gradient(to top, var(--bg) 0%, transparent 100%)',
+          pointerEvents: 'none',
+        }} />
+
         {/* Multi-layer gradient glow */}
         <div aria-hidden="true" style={{
           position: 'absolute', inset: 0, pointerEvents: 'none',
@@ -32,7 +64,6 @@ export default function Home() {
             'radial-gradient(ellipse 900px 550px at 65% -80px, rgba(90,160,240,0.14) 0%, transparent 60%)',
             'radial-gradient(ellipse 700px 450px at -10% 100%, rgba(200,169,110,0.07) 0%, transparent 60%)',
             'radial-gradient(ellipse 400px 300px at 105% 75%, rgba(60,120,220,0.10) 0%, transparent 60%)',
-            'var(--bg)',
           ].join(', '),
         }} />
 
@@ -103,29 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Hero image ──────────────────────────────── */}
-      <div style={{ position: 'relative', width: '100%', lineHeight: 0 }}>
-        <Image
-          src="/images/hero.png"
-          alt="Нест Капитал"
-          width={1920}
-          height={1000}
-          priority
-          style={{ width: '100%', height: 'auto', display: 'block', opacity: 0.65 }}
-        />
-        <div style={{
-          position: 'absolute', top: 0, left: 0, right: 0, height: '50%',
-          background: 'linear-gradient(to bottom, #0d2647, transparent)',
-          pointerEvents: 'none',
-        }} />
-        <div style={{
-          position: 'absolute', bottom: 0, left: 0, right: 0, height: '55%',
-          background: 'linear-gradient(to top, #050f20, transparent)',
-          pointerEvents: 'none',
-        }} />
-      </div>
-
-      {/* ── Metrics ─────────────────────────────────── */}
+{/* ── Metrics ─────────────────────────────────── */}
       <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
         <div style={{
           maxWidth: 1200,
