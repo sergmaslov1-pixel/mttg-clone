@@ -62,6 +62,7 @@ export default function Home() {
           position: 'absolute', inset: 0, pointerEvents: 'none',
           background: [
             'radial-gradient(ellipse 900px 550px at 65% -80px, rgba(90,160,240,0.14) 0%, transparent 60%)',
+            'radial-gradient(ellipse 600px 400px at -5% 60%, rgba(61,171,110,0.08) 0%, transparent 60%)',
             'radial-gradient(ellipse 700px 450px at -10% 100%, rgba(200,169,110,0.07) 0%, transparent 60%)',
             'radial-gradient(ellipse 400px 300px at 105% 75%, rgba(60,120,220,0.10) 0%, transparent 60%)',
           ].join(', '),
@@ -82,7 +83,7 @@ export default function Home() {
             fontWeight: 700,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
-            color: 'var(--accent)',
+            color: 'var(--green)',
             marginBottom: 28,
             display: 'flex',
             alignItems: 'center',
@@ -90,7 +91,7 @@ export default function Home() {
           }}>
             <span aria-hidden="true" style={{
               display: 'block', width: 28, height: 1,
-              background: 'var(--accent)', flexShrink: 0,
+              background: 'var(--green)', flexShrink: 0,
             }} />
             Частная инвестиционная группа
           </p>
@@ -152,7 +153,7 @@ export default function Home() {
               {/* Accent tick at top */}
               <div aria-hidden="true" style={{
                 position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
-                width: 1, height: 20, background: 'var(--accent)', opacity: 0.5,
+                width: 1, height: 20, background: 'var(--green)', opacity: 0.6,
               }} />
               <p style={{
                 fontSize: 'clamp(30px, 4vw, 48px)',

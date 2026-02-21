@@ -9,6 +9,8 @@
   --text-muted:  #6b8ab8;
   --accent:      #c8a96e;
   --accent-hover:#d4ba85;
+  --green:       #3dab6e;
+  --green-dim:   rgba(61, 171, 110, 0.10);
   --blue:        #5aa0f0;
   --blue-dim:    rgba(90, 160, 240, 0.10);
   --gold-dim:    rgba(200, 169, 110, 0.07);
@@ -75,7 +77,7 @@ a:hover { color: var(--accent); }
   transition: color 0.2s;
 }
 .nav-link:hover  { color: var(--text) !important; }
-.nav-link.active { color: var(--accent) !important; }
+.nav-link.active { color: var(--green) !important; }
 
 /* ─── Buttons ─────────────────────────────────────── */
 .btn-primary {
@@ -137,7 +139,7 @@ a:hover { color: var(--accent); }
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--green);
   margin-bottom: 16px;
 }
 .section-label::before {
@@ -145,7 +147,7 @@ a:hover { color: var(--accent); }
   display: block;
   width: 24px;
   height: 1px;
-  background: var(--accent);
+  background: var(--green);
   flex-shrink: 0;
 }
 
@@ -184,8 +186,8 @@ a:hover { color: var(--accent); }
   white-space: nowrap;
 }
 .anchor-tab:hover {
-  color: var(--accent) !important;
-  border-bottom-color: var(--accent) !important;
+  color: var(--green) !important;
+  border-bottom-color: var(--green) !important;
 }
 
 /* ─── Form inputs ─────────────────────────────────── */
