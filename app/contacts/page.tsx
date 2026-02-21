@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Контакты — МТТ Групп',
+  title: 'Контакты — Нест Капитал',
 };
 
 export default function ContactsPage() {

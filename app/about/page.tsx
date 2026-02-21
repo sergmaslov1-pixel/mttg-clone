@@ -4,7 +4,7 @@ import TeamSection from '@/components/TeamSection';
 import NewsSection from '@/components/NewsSection';
 
 export const metadata: Metadata = {
-  title: 'О компании — МТТ Групп',
+  title: 'О компании — Нест Капитал',
 };
 
 const assets = [

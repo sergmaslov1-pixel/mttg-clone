@@ -17,11 +17,10 @@ export default function Home() {
 
       {/* ── Hero ────────────────────────────────────── */}
       <section style={{
-        minHeight: 'calc(100vh - 64px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '80px 24px',
+        padding: '72px 24px 64px',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -108,7 +107,7 @@ export default function Home() {
       <div style={{ position: 'relative', width: '100%', lineHeight: 0 }}>
         <Image
           src="/images/hero.png"
-          alt="МТТ Групп"
+          alt="Нест Капитал"
           width={1920}
           height={1000}
           priority
@@ -136,7 +135,7 @@ export default function Home() {
         }}>
           {metrics.map(({ value, label }, i) => (
             <div key={label} style={{
-              padding: '52px 36px',
+              padding: '40px 36px',
               textAlign: 'center',
               borderRight: i < metrics.length - 1 ? '1px solid var(--border)' : 'none',
               position: 'relative',
